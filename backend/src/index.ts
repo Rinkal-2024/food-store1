@@ -28,8 +28,8 @@ app.use('/home' , (req,res)=>{
     res.status(200).send('hello')
 })
 
-const port =6000;
+const port =4000;
 app.listen(port, () => {
-    console.log("your website is served on http://localhost:6000");
+    console.log("your website is served on http://localhost:4000");
 });
             
