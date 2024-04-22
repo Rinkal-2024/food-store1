@@ -1,0 +1,26 @@
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  div a {
+    background-color: #f0f0f0;
+    padding: 0.3rem 1rem;
+    margin: 0.2rem 0.15rem;
+    border-radius: 10rem;
+    font-weight: bolder;
+    color: rgb(89, 66, 143);
+    text-decoration: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+  }
+  
+ div a.active {
+    background-color: rgb(79, 64, 136);
+    color: #f0f0f0;
+  }
+div a:hover{
+ background-color: rgb(76, 41, 116);
+ color: aliceblue;
+}

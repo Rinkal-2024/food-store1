@@ -1,0 +1,26 @@
+<header><app-loading></app-loading>
+<div class="container">
+        <a routerLink="/" class="logo" >Food-Zone</a>
+        <!-- <img src="./assets/logo.jpg"> -->
+        <nav>
+            <ul>
+                <li *ngIf="!isAuth">
+                    <a routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="isAuth" class="menu-container">
+                    <a routerLink="/dashboard">{{user.name}}</a>
+                    <div class="menu">
+                        <a routerLink="/profile">Profile
+                            
+                        </a>
+                        <a routerLink="/orders">Orders</a>
+                        <a (click)="logout()">logout</a>
+                    </div>
+                </li>
+                <li>
+                    <a routerLink="/cart-page"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span *ngIf="cartQuantity">{{cartQuantity}}</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
