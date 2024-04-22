@@ -23,6 +23,9 @@ app.use("/api/food" ,foodRouter);
 app.use("/api/users" ,userRouter);
 app.use("/api/orders" ,orderRouter);
 
+app.use('/' , (req,res)=>{
+    res.send("hii")
+})
 
 app.use('/home' , (req,res)=>{
     res.status(200).send('hello')
