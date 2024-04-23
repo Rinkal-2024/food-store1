@@ -1,6 +1,6 @@
 
 import {model, Schema, Types} from 'mongoose';
-import { OrderStatus } from '../constant/order_status';
+import {OrderStatus} from '../constant/order_status'
 import { Food, FoodSchema } from './food.model';
 
 export interface LatLng{
@@ -37,14 +37,13 @@ export interface Order{
     address: string;
     addressLatLng:LatLng
     paymentId: string;
-    status: OrderStatus;
+    status:OrderStatus
     user: Types.ObjectId;
     createdAt: Date;
     updatedAt: Date
   }
 
   const orderSchema = new Schema<Order>({
-
       name: {type: String, required: true},
       address: {type: String, required: true},
       addressLatLng: {type: LatLngSchema, required: true},
