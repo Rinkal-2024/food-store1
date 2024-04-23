@@ -1,4 +1,4 @@
-const BASE_URL = "https://food-zone-server-nine.vercel.app"
+const BASE_URL = "https://vuebackend-main.vercel.app"
 
 export const FOOD_URL = BASE_URL +'/api/food';
 export const FOOD_TAG_URL = BASE_URL +'/api/food/tag';
