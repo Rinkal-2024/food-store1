@@ -40,13 +40,13 @@ router.post("/login", asyncHandler(
 //Register Page
 router.post('/register' , asyncHandler(
     async (req,res) =>{
-        const {name,email,Password,address} = req.body
+        const {name,email,password,address} = req.body
         const user = await UserModel.findOne({email})
         if(user){
             res.status(HTTP_BAD_REQUEST).send('user is already exist please login')
             return;
         }
-        const encryptedPassword = await bcrypt.hash(Password,10);
+        const encryptedPassword = await bcrypt.hash(password,10);
 
         const newUser:User ={
             id:'',
